@@ -1,0 +1,41 @@
+.notification
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 50px
+  line-height: 50px
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  background-color: $bgBlue
+  color: #fff
+
+  &.orange
+    background-color: $bgOrange
+    color: #182638
+    .notification__label
+      color: $text
+
+  &.red
+    background-color: $bgRed
+    color: #182638
+    .notification__label
+      color: $text
+
+  &__text
+    font-size: 15px
+    font-family: $f-display-regular
+
+  &__label
+    margin-left: 10px
+    width: 188px
+    height: 30px
+    line-height: 30px
+    border-radius: 15px
+    font-size: 15px
+    letter-spacing: 0.3px
+    color: $bgBlue
+    background-color: #fff
+    font-family: $f-display-semibold

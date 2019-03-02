@@ -1,0 +1,72 @@
+.dropdown
+  position: relative
+  padding: 0 15px
+  width: 320px
+  height: 60px
+  line-height: 60px
+  border-radius: 30px
+  cursor: pointer
+  background-color: $bgGrey
+
+  &::after
+    position: absolute
+    content: ''
+    right: 20px
+    top: 50%
+    width: 12px
+    height: 12px
+    background-image: url('~media/arrow-down.svg')
+    background-repeat: no-repeat
+    background-size: cover
+    transform: translateY(-50%)
+    transition: $transition
+    z-index: 1
+    opacity: 0.75
+
+  &.open
+
+    &::after
+      transform: rotate(180deg) translateY(50%)
+
+    .dropdown__list
+      opacity: 1
+      top: 78px
+
+
+  &__value
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+  &__icon
+    width: 30px
+    height: 30px
+    margin-right: 12px
+    border-radius: 50px
+    background-color: #182638
+
+  &__list
+    position: absolute
+    top: 64px
+    left: 0
+    width: 100%
+    background-color: $bgGrey
+    border-radius: 8px
+    z-index: 10
+    transition: $transition
+    opacity: 0
+
+  &__el
+    padding: 0 15px
+    display: flex
+    align-items: center
+    height: 60px
+    line-height: 60px
+    transition: $transition
+    &:hover
+      background-color: #38455A
+
+  &__name
+    color: #fff
+    font-size: 17px

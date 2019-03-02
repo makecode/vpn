@@ -1,0 +1,20 @@
+.list
+  display: flex
+
+  &__el
+    position: relative
+    width: 33%
+
+    &:after
+      position: absolute
+      top: 50%
+      right: 0
+      transform: translateY(-50%)
+      content: ''
+      background-color: #2b3d54
+      width: 1px
+      height: 42px
+
+    &:last-child
+      &:after
+        display: none

@@ -1,0 +1,50 @@
+.hamburger-wrap
+  display: flex
+  span
+    margin-right: 6px
+
+.hamburger
+  position: relative
+  display: inline-block
+  width: 20px
+  height: 16px
+  transition: .5s ease-in-out
+  cursor: pointer
+  &:hover
+    .hamburger__el
+      background-color: #3bb0ff
+
+  &__el
+    display: block
+    position: absolute
+    left: 0
+    height: 2px
+    width: 100%
+    background-color: rgba(#fff, .95)
+    transition: .25s ease-in-out
+    transform-origin: left top
+
+    &:nth-child(1)
+      top: 0
+
+    &:nth-child(2)
+      top: 50%
+      transform: translateY(-50%)
+
+    &:nth-child(3)
+      top: 100%
+      transform: translateY(-100%)
+
+  &.open
+
+    .hamburger__el
+      left: 4px
+
+      &:nth-child(1)
+        transform: rotate(45deg)
+
+      &:nth-child(2)
+        opacity: 0
+
+      &:nth-child(3)
+        transform: rotate(-45deg) translateY(-100%)

@@ -1,0 +1,37 @@
+extends ../base
+block title
+  |VPN
+block main
+  div.app
+    div.main
+      div.main-bg
+      div.notification.red
+        span.notification__text <strong>Trial Mode</strong>: New VPN time slot is available.
+        span.notification__label Remove Time Limit
+
+      div.main-wrap
+        div.switch-wrap
+          span.switch-wrap__name Connected
+          div.switch.disabled
+            label.switch__label
+            input.switch__input(type='checkbox')
+            span.switch__name.is-on On
+            span.switch__name Off
+            span.switch__round
+
+        include ../partials/dropdown
+
+    div.footer
+      ul.list
+        li.list__el
+          div.data
+            span.data__name Virtual IP:
+            span.data__quantity -
+        li.list__el
+          div.data
+            span.data__name Received:
+            span.data__quantity -
+        li.list__el
+          div.data
+            span.data__name Sent:
+            span.data__quantity -

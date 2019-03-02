@@ -1,0 +1,125 @@
+.switch-wrap
+  margin-bottom: 25px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  &__name
+    margin-bottom: 10px
+    display: block
+    letter-spacing: -0.1px
+    font-family: $f-text-regular
+    color: rgba(white, .5)
+
+.switch
+  display: inline-block
+  user-select: none
+  position: relative
+
+  &__label
+    position: relative
+    display: block
+    width: 120px
+    height: 60px
+    border-radius: 30px
+    background-color: $bgGrey
+    transition: all .3s ease-in-out
+    z-index: $labelZ
+    cursor: pointer
+
+    &:hover
+      background-color: #38455A
+
+  &__round
+    display: block
+    position: absolute
+    top: 2px
+    left: 2px
+    content: ''
+    width: 56px
+    height: 56px
+    background-color: #fff
+    border-radius: 50%
+    transition: all .4s ease-in-out
+    z-index: $roundZ
+    cursor: pointer
+
+    &:after
+      position: absolute
+      content: ''
+      width: 20px
+      height: 20px
+      background-image: url('~media/check_green.svg')
+      background-repeat: no-repeat
+      z-index: $iconZ
+      opacity: 0
+      transition: $transition
+      +center
+
+    &:before
+      position: absolute
+      content: ''
+      top: 15px
+      left: 15px
+      width: 26px
+      height: 26px
+      border: 4px solid #182638
+      border-radius: 50%
+      border-top-color: white
+      animation: spin 1s ease-in-out infinite
+      transition: $transition
+      opacity: 0
+
+  &__input
+    display: none
+
+  &__name
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 20px
+    color: #fff
+    font-size: 17px
+    z-index: $textZ
+    text-transform: uppercase
+    cursor: pointer
+
+    &.is-on
+      left: 20px
+
+  &.active
+
+    .switch__label
+      background-color: $bgGreen
+
+    .switch__round
+      left: 62px
+
+    .switch__round::after
+      opacity: 1
+
+  &.disabled
+    pointer-events: none
+
+    .switch__label:after
+      background-color: rgba(255, 255, 255, 0.1)
+    .switch__name
+      opacity: .25
+    .switch__round
+      background-color: #434F63
+
+  &.loading
+    pointer-events: none
+
+    .switch__label
+      background-color: $bgGrey
+
+    .switch__round::after
+      display: none
+
+    .switch__round::before
+      opacity: 1
+
+    .switch__name
+      display: none
+
