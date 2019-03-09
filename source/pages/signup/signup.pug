@@ -1,0 +1,26 @@
+extends ../base
+block title
+  |VPN
+block main
+  div.app
+    div.main.is-signup
+      div.main-bg
+      div.signup
+        div.signup__logo
+          img(src=require('./../../media/logo_safeLine_vertical.svg'))
+        div.advantages
+          ul.advantages__list
+            each item in advantagesItemsBlue
+              li.advantages__el= item
+        div.form-wrap
+          form.signup__form
+            input.signup__input(type="email" placeholder="Email address")
+          button.btn.large(type="button") Sign In & Start
+          div.signup__info
+            span Password will be sent to your email.
+            span We guarantee 100% privacy.
+          div.signup__up
+            span Already have an account?
+            button.btn Sign Up
+
+    //include ../partials/mobile-menu.pug

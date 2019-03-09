@@ -1,0 +1,93 @@
+.plan
+  position: relative
+  padding: 15px 20px 20px 15px
+  width: 200px
+  height: 158px
+  border: 1px solid #DDDCDE
+  border-radius: 2px
+  background-color: #fff
+  cursor: pointer
+  box-sizing: border-box
+
+  &__head
+    position: relative
+    padding-top: 6px
+
+    .radio
+      position: absolute
+      top: 0
+      left: 0
+
+  &__quantity
+    display: block
+    margin-bottom: 12px
+    font-size: 17px
+    opacity: .95
+    letter-spacing: 0.7px
+    font-family: $f-display-semibold
+
+  &__price
+    display: block
+    font-size: 28px
+    letter-spacing: 0.7px
+    font-family: $f-display-bold
+
+  &__month
+    font-size: 15px
+    opacity: .95
+    letter-spacing: -0.1px
+    font-family: $f-display-regular
+
+  &__discount
+    margin-top: 13px
+    display: block
+    color: #0ec473
+    font-size: 17px
+    letter-spacing: 0.4px
+    font-family: $f-display-semibold
+
+  &__label
+    display: inline-block
+    white-space: nowrap
+    padding: 0 25px
+    font-size: 15px
+    font-family: $f-display-semibold
+    height: 28px
+    line-height: 28px
+    color: #FFFFFF
+    background-color: #0ec473
+    border-radius: 22px
+    position: absolute
+    top: -16px
+    left: 50%
+    transform: translate(-50%)
+
+  &.active
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15)
+    border-width: 2px
+    border-color: #4294E2
+
+    .radio__el
+      border-color: $bgBlue
+      background-color: $bgBlue
+
+      &::after
+        position: absolute
+        top: 50%
+        left: 50%
+        content: ''
+        width: 100%
+        height: 100%
+        transform: translate(-50%, -50%)
+        background: url('../media/check_white.svg') center no-repeat
+
+  &:first-child
+    .plan__discount
+      color: $text
+      opacity: .25
+
+  &:nth-child(2)
+    padding: 25px 20px 20px 23px
+    //margin: 0 18px
+    width: 220px
+    height: 178px

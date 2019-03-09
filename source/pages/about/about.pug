@@ -1,0 +1,52 @@
+extends ../base
+block title
+  |VPN
+block main
+  div.app
+    div.popup.is-about
+      span.popup__close.icon.icon-close
+      div.popup__logo
+        img(src=require('./../../media/icon_safeLine.svg'))
+      div.popup__title
+        h1.title  SafeLine VPN
+        span.version Version 0.1
+      div.popup__info
+        span.copyright © 2019 SafeLine VPN
+        a(href="safelinevpn.com").popup__link safelinevpn.com
+
+    include ../partials/mobile-menu.pug
+
+    div.main
+      div.main-bg
+      div.notification
+        span.notification__text <strong>Trial Mode</strong>: New VPN time slot is available.
+        div.notification__label
+          span.notification__descr Remove Time Limit
+          span.notification__star.icon.star_blue
+
+      div.main-wrap
+        div.switch-wrap
+          span.switch-wrap__name Click to connect
+          div.switch
+            label.switch__label
+            input.switch__input(type='checkbox')
+            span.switch__name.is-on On
+            span.switch__name Off
+            span.switch__round
+
+        include ../partials/dropdown.pug
+
+    div.footer
+      ul.list
+        li.list__el
+          div.data
+            span.data__name Virtual IP:
+            span.data__quantity -
+        li.list__el
+          div.data
+            span.data__name Received:
+            span.data__quantity -
+        li.list__el
+          div.data
+            span.data__name Sent:
+            span.data__quantity -

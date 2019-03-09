@@ -1,0 +1,92 @@
+.popup
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  background-color: white
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.15)
+  box-sizing: border-box
+  z-index: 5
+  text-align: center
+
+  &__info
+    display: flex
+    flex-direction: column
+
+  &__link
+    color: $bgBlue
+
+  &__close
+    position: absolute
+    content: ''
+    top: 16px
+    right: 16px
+    cursor: pointer
+
+  &__logo
+    display: inline-block
+
+  &__form
+    margin-bottom: 10px
+
+  &__input
+    margin-bottom: 10px
+    padding-left: 15px
+    width: 100%
+    height: 40px
+    border: solid 1px rgba(24, 38, 56, 0.15)
+    border-radius: 4px
+
+  &__btn-password
+    margin-top: 10px
+    font-family: $f-text-medium
+
+  &__up
+    display: flex
+    justify-content: center
+    margin-top: 22px
+    font-size: 15px
+    letter-spacing: 0.3px
+
+    span
+      margin-right: 7px
+      color: $text
+      opacity: .75
+      font-family: $f-display-regular
+
+    .btn
+      font-size: 15px
+      font-family: $f-display-semibold
+
+  .copyright,
+  .version
+    opacity: 0.75
+
+  &.is-about
+    padding: 30px 20px 20px 20px
+    width: 220px
+    height: 208px
+    h1
+      font-size: 15px
+      letter-spacing: 0.3px
+      opacity: 0.95
+      font-family: $f-display-semibold
+
+    .popup
+
+      &__logo
+        margin-bottom: 18px
+
+      &__title
+        margin-bottom: 8px
+
+  &.is-sign
+    width: 340px
+    padding: 40px 30px 30px 30px
+
+    .popup
+      &__logo
+        margin-bottom: 25px
+
+      &__img
+        width: 208px

@@ -11,6 +11,7 @@
   text-align: center
   background-color: $bgBlue
   color: #fff
+  z-index: 1
 
   &.orange
     background-color: $bgOrange
@@ -25,11 +26,15 @@
       color: $text
 
   &__text
+    margin-right: 10px
     font-size: 15px
     font-family: $f-display-regular
 
   &__label
-    margin-left: 10px
+    padding-right: 17px
+    position: relative
+    //display: flex
+    //align-items: center
     width: 188px
     height: 30px
     line-height: 30px
@@ -39,3 +44,9 @@
     color: $bgBlue
     background-color: #fff
     font-family: $f-display-semibold
+
+  &__star
+    position: absolute
+    top: 50%
+    right: 15px
+    transform: translateY(-50%)

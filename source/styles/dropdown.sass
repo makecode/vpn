@@ -8,36 +8,43 @@
   cursor: pointer
   background-color: $bgGrey
 
-  &::after
-    position: absolute
-    content: ''
-    right: 20px
-    top: 50%
-    width: 12px
-    height: 12px
-    background-image: url('~media/arrow-down.svg')
-    background-repeat: no-repeat
-    background-size: cover
-    transform: translateY(-50%)
-    transition: $transition
-    z-index: 1
-    opacity: 0.75
-
   &.open
-
-    &::after
-      transform: rotate(180deg) translateY(50%)
-
-    .dropdown__list
-      opacity: 1
-      top: 78px
-
+    //.dropdown__list
+    //  visibility: visible
+    .dropdown__el
+      &.is-active
+        &:after
+          position: absolute
+          content: ''
+          top: 50%
+          right: 20px
+          transform: translateY(-50%)
+          width: 24px
+          height: 24px
+          background-image: url('~media/check_green.svg')
+          background-size: cover
 
   &__value
+    position: relative
     display: flex
     flex-direction: row
     justify-content: flex-start
     align-items: center
+
+    &::after
+      position: absolute
+      content: ''
+      right: 20px
+      top: 50%
+      width: 12px
+      height: 12px
+      background-image: url('~media/arrow-down.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      transform: translateY(-50%)
+      transition: $transition
+      z-index: 1
+      opacity: 0.75
 
   &__icon
     width: 30px
@@ -47,17 +54,20 @@
     background-color: #182638
 
   &__list
+    display: none
     position: absolute
-    top: 64px
-    left: 0
-    width: 100%
+    left: 50%
+    top: calc(50% - 50px)
+    transform: translate(-50%, -50%)
+    width: 320px
+    height: 420px
     background-color: $bgGrey
     border-radius: 8px
     z-index: 10
-    transition: $transition
-    opacity: 0
+    overflow-y: scroll
 
   &__el
+    position: relative
     padding: 0 15px
     display: flex
     align-items: center

@@ -1,23 +1,26 @@
+-
+  const countryItems = [
+    { title: 'Germany' },
+    { title: 'Germany' },
+    { title: 'Germany', active: true },
+    { title: 'Germany' },
+    { title: 'Germany' },
+    { title: 'Germany' },
+    { title: 'Germany' },
+    { title: 'Germany' },
+    { title: 'Germany' },
+    { title: 'Germany' }
+  ]
+
 div.country
   span.country__text Browsing from:
-  div.dropdown
+  div.dropdown#dropdown
     div.dropdown__value
       span.dropdown__icon.icon.de
       span.dropdown__name Germany
 
-    ul.dropdown__list
-      li.dropdown__el
-        span.dropdown__icon
-        span.dropdown__name Germany
-      li.dropdown__el
-        span.dropdown__icon
-        span.dropdown__name Germany
-      li.dropdown__el
-        span.dropdown__icon
-        span.dropdown__name Germany
-      li.dropdown__el
-        span.dropdown__icon
-        span.dropdown__name Germany
-      li.dropdown__el
-        span.dropdown__icon
-        span.dropdown__name Germany
+    ul.dropdown__list#dropdown-list
+      each country in countryItems
+        li.dropdown__el(class= country.active ? 'is-active' : '')
+          span.dropdown__icon
+          span.dropdown__name=country.title

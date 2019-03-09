@@ -1,0 +1,53 @@
+extends ../base
+block title
+  |VPN
+block main
+  div.app
+    div.popup.is-sign
+      span.popup__close.icon.icon-close
+      span.popup__logo
+        img.popup__img(src=require('./../../media/logo_safeLine.png'))
+      form.popup__form
+        input.popup__input(type="email" placeholder="Email address")
+        input.popup__input(type="password" placeholder="Password")
+      button.btn.large(type="button") Sign In
+      button.popupn__btn-password.btn Forgot password?
+      div.sign__up
+        span Don’t have an account?
+        button.btn Sign Up
+    include ../partials/mobile-menu.pug
+
+    div.main
+      div.main-bg
+      div.notification
+        span.notification__text <strong>Trial Mode</strong>: New VPN time slot is available.
+        div.notification__label
+          span.notification__descr Remove Time Limit
+          span.notification__star.icon.star_blue
+
+      div.main-wrap
+        div.switch-wrap
+          span.switch-wrap__name Click to connect
+          div.switch
+            label.switch__label
+            input.switch__input(type='checkbox')
+            span.switch__name.is-on On
+            span.switch__name Off
+            span.switch__round
+
+        include ../partials/dropdown.pug
+
+    div.footer
+      ul.list
+        li.list__el
+          div.data
+            span.data__name Virtual IP:
+            span.data__quantity -
+        li.list__el
+          div.data
+            span.data__name Received:
+            span.data__quantity -
+        li.list__el
+          div.data
+            span.data__name Sent:
+            span.data__quantity -

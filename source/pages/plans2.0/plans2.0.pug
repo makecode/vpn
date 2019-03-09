@@ -1,0 +1,42 @@
+extends ../base
+
+block title
+  |VPN
+block main
+  div.app.is-plans
+    div.main.is-plans
+      div.plans-wrap
+        h1.plans-wrap__title Chose your SafeLine VPN plan
+        div.advantages.is-green
+          ul.advantages__list
+            each item in advantagesItems
+              li.advantages__el= item
+        div.plans
+          each plan in plansItems
+            .plan(class= plan.active ? 'active' : '')
+              if plan.best
+                span.plan__label Best deal
+              .plan__head
+                span.plan__quantity= plan.period
+                .radio
+                  input.radio__input(type='radio', value='radio_1')
+                  label.radio__el
+              span.plan__price= plan.price
+              span.plan__month per month
+              span.plan__discount= plan.saving
+
+        div.plans__attention
+          div.attention
+            span.attention__icon.icon.icon-attention
+            span.attention__text The 12 month plan includes bigger savings and fully refundable for 30 days.
+
+        div.plans__action
+          button.btn.large Select Plan
+
+        div.privileges
+          div.privilege
+            span.privilege__icon.icon.is-castle
+            span.privilege__text 128-bit SSL encrypted payment
+          div.privilege
+            span.privilege__icon.icon.is-arrow-blue
+            span.privilege__text 30 days money-back guarantee
