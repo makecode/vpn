@@ -27,7 +27,7 @@
     display: inline-block
 
   &__form
-    margin-bottom: 10px
+    margin-bottom: 20px
 
   &__input
     margin-bottom: 10px
@@ -37,8 +37,21 @@
     border: solid 1px rgba(24, 38, 56, 0.15)
     border-radius: 4px
 
+    &:last-child
+      margin-bottom: 0
+
+    &:focus
+      outline: none
+
+    &::placeholder
+      color: $text
+      opacity: 0.75
+
+  &__btn
+    margin-bottom: 10px
+
   &__btn-password
-    margin-top: 10px
+    margin-bottom: 20px
     font-family: $f-text-medium
 
   &__up

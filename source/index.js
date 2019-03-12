@@ -21,9 +21,9 @@ $(document).ready(function() {
   // dropdown menu
   $($dropDown).on("click", function(e) {
     if($($dropDown).hasClass(openedClass)) {
-      $($dropDownList).hide(300);
+      $($dropDownList).hide();
     } else {
-      $($dropDownList).show(300);
+      $($dropDownList).show();
     }
     $(this).toggleClass(openedClass);
     e.stopPropagation()
@@ -43,7 +43,7 @@ $(document).ready(function() {
   $(document).on("click", function(e) {
     if ($(e.target).is($dropDown) === false) {
       $($dropDown).removeClass(openedClass);
-      $($dropDownList).hide(300);
+      $($dropDownList).hide();
     } else if ($(e.target).is($mobileMenu) === false) {
       $($mobileMenu).removeClass(openedClass);
     }

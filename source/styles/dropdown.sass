@@ -7,6 +7,7 @@
   border-radius: 30px
   cursor: pointer
   background-color: $bgGrey
+  transition: $transition
 
   &.open
     //.dropdown__list
@@ -60,11 +61,12 @@
     top: calc(50% - 50px)
     transform: translate(-50%, -50%)
     width: 320px
-    height: 420px
+    max-height: 390px
     background-color: $bgGrey
     border-radius: 8px
     z-index: 10
     overflow-y: scroll
+    transition: $transition
 
   &__el
     position: relative
@@ -75,7 +77,7 @@
     line-height: 60px
     transition: $transition
     &:hover
-      background-color: #38455A
+      background-color: rgba(white, 0.05)
 
   &__name
     color: #fff

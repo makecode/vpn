@@ -12,7 +12,7 @@ block main
             each item in advantagesItems
               li.advantages__el= item
         div.plans
-          each plan in plansItems
+          each plan in plansItems2
             .plan(class= plan.active ? 'active' : '')
               if plan.best
                 span.plan__label Best deal
@@ -27,7 +27,7 @@ block main
 
         div.plans__attention
           div.attention
-            span.attention__icon.icon.icon-attention
+            span.attention__icon.icon.is-attention
             span.attention__text The 12 month plan includes bigger savings and fully refundable for 30 days.
 
         div.plans__action

@@ -96,7 +96,7 @@ a
   justify-content: center
 
 .privilege
-  margin-right: 10px
+  margin-right: 12px
   display: flex
   align-items: center
 
@@ -108,45 +108,39 @@ a
   &:last-child
     margin-right: 0
 
-.attention
-  display: inline-block
-  padding: 6px 12px
-  width: 504px
-  border-radius: 4px
-  color: white
-  background-color: #ffb10f
-  opacity: 0.95
-  box-sizing: border-box
-
-  &__text
-    display: inline-block
-    margin-left: 6px
-    font-family: $f-text-regular
-    letter-spacing: -0.1px
-
-.menu
-  display: inline-flex
-  align-items: center
-  color: white
-
-  &__text
-    display: inline-block
-    margin-right: 6px
-    transition: $transition
-
-  &:hover
-    color: #3bb0ff
-    cursor: pointer
-
-    .hamburger__el
-      background-color: #3bb0ff
-
 .window-header
+  position: relative
   width: 720px
-  padding: 4px 10px
+  height: 36px
+  line-height: 36px
+  padding: 0 13px
   display: flex
   justify-content: flex-end
   background-color: #1B2537
 
+.logo
+  display: flex
+  align-items: center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+
+  &__name
+    margin-left: 3px
+    color: white
+    opacity: .95
+    font-size: 13px
+    font-family: $f-text-medium
+
 .i-semibold
   font-family: $f-display-semibold
+
+.sign-up
+  font-size: 15px
+  span
+    font-family: $f-display-regular
+  .btn
+    margin-left: 3px
+    letter-spacing: 0.3px
+    font-family: $f-display-semibold

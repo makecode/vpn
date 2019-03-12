@@ -8,6 +8,7 @@
   background-color: #fff
   cursor: pointer
   box-sizing: border-box
+  z-index: 1
 
   &__head
     position: relative
@@ -61,11 +62,12 @@
     top: -16px
     left: 50%
     transform: translate(-50%)
+    z-index: 2
 
   &.active
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15)
-    border-width: 2px
-    border-color: #4294E2
+
+    &::after
+      display: block
 
     .radio__el
       border-color: $bgBlue
@@ -88,6 +90,16 @@
 
   &:nth-child(2)
     padding: 25px 20px 20px 23px
-    //margin: 0 18px
     width: 220px
     height: 178px
+
+  &::after
+    display: none
+    position: absolute
+    content: ''
+    top: -1px
+    left: -1px
+    width: calc(100% + 2px)
+    height: calc(100% + 2px)
+    border: 2px solid #4294E2
+    border-radius: 2px
