@@ -16,6 +16,7 @@
   &.orange
     background-color: $bgOrange
     color: #182638
+
     .notification__label
       color: $text
 
@@ -44,6 +45,23 @@
     color: $bgBlue
     background-color: #fff
     font-family: $f-display-semibold
+    cursor: pointer
+    transition: $transition
+
+    &:hover
+      background-color: $text
+      color: #fff
+      opacity: 0.95
+
+      .notification__descr
+        color: #fff
+        opacity: 0.95
+
+      .notification__star
+        width: 16px
+        height: 16px
+        background-image: url('../media/star_white.svg')
+        background-size: cover
 
   &__star
     position: absolute
