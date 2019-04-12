@@ -1,0 +1,25 @@
+extends ../base
+block title
+  |VPN
+block main
+  div.trial#trial
+    div.window-header
+      div.logo
+        img(src=require('./../../media/logo-safeline.svg'))
+        span.logo__name SafeLine VPN
+    div.trial__wrap
+      div.trial__left
+        h1.trial__title Start your 7-day free trial
+        div.advantages.is-green
+          ul.advantages__list.is-vertical
+            each item in advantagesItems
+              li.advantages__el= item
+        div.trial__btn
+          button.btn.large Try free for 7 days
+        span.signin Already have Premium account?
+        button.btn Sign in
+        div.trial__info
+          span For more info see our <span class="underline">Terms and conditions</span> and <span class="underline">Privacy Policy</span>.
+      div.trial__right
+        div.trial__icon
+          img(src=require('./../../media/icon_data_private.svg'))

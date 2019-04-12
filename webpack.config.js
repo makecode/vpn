@@ -92,6 +92,11 @@ const common = merge([
         chunks: ['index', 'common'],
         template: PATH.source + '/pages/menu/menu.pug'
       }),
+      new HtmlWebpackPlugin({
+        filename: 'free.html',
+        chunks: ['index', 'common'],
+        template: PATH.source + '/pages/free/free.pug'
+      }),
       // new CopyWebpackPlugin([{
         // from: './locales/**/*',
         // to: './js/'
