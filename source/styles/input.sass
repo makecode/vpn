@@ -1,0 +1,40 @@
+.input
+  position: relative
+  padding-bottom: 16px
+  text-align: left
+
+  &__field
+    padding-left: 15px
+    width: 100%
+    height: 40px
+    border: solid 1px rgba(24, 38, 56, 0.15)
+    border-radius: 4px
+
+    &:focus
+      outline: none
+
+    &::placeholder
+      color: $text
+      opacity: 0.75
+
+  &__label
+    position: absolute
+    bottom: 0
+    left: 0
+    font-size: 10px
+
+  &.dark
+    .input__field
+      color: white
+      background-color: $bgGrey
+
+      &::placeholder
+        color: white
+        opacity: 0.75
+
+  &.error
+    .input__field
+      border-color: $red
+
+    .input__label
+      color: $red

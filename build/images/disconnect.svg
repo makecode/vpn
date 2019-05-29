@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Disconnected</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Disconnected" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Fill-1" points="0 30 30 30 30 0 0 0"></polygon>
+        <path d="M6,24 L23,6" id="Path-2" stroke="#FF335A" stroke-width="3"></path>
+        <path d="M6,24 L23,6" id="Path-2" stroke="#FF335A" stroke-width="3" transform="translate(14.500000, 15.000000) scale(-1, 1) translate(-14.500000, -15.000000) "></path>
+    </g>
+</svg>

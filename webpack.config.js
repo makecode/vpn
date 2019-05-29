@@ -58,6 +58,11 @@ const common = merge([
         template: PATH.source + '/pages/connected/connected.pug'
       }),
       new HtmlWebpackPlugin({
+        filename: 'disconnect.html',
+        chunks: ['index', 'common'],
+        template: PATH.source + '/pages/disconnect/disconnect.pug'
+      }),
+      new HtmlWebpackPlugin({
         filename: 'waiting.html',
         chunks: ['index', 'common'],
         template: PATH.source + '/pages/waiting/waiting.pug'

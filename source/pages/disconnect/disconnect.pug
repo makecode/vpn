@@ -3,40 +3,25 @@ block title
   |VPN
 block main
   div.app
-    div.popup.is-sign
-      span.popup__close.icon.icon-close
-      span.popup__logo
-        img.popup__img(src=require('./../../media/logo_safeLine.png'))
-      form.popup__form
-        div.input
-          input.input__field(type="email" placeholder="Email address")
-        div.input.error
-          input.input__field(type="password" placeholder="Password")
-          span.input__label Error message
-      button.popup__btn.btn.large(type="button") Sign In
-      button.popup__btn-password.btn Forgot password?
-      div.sign-up
-        span Don’t have an account?
-        button.btn Sign Up
-    include ../partials/mobile-menu.pug
-
     div.main
       div.main-bg
-      div.notification
-        span.notification__text <strong>Trial Mode</strong>: New VPN time slot is available.
+      div.notification.red
+        span.notification__text <strong>Trial Mode</strong>: Disconnect in 00:00 min.
         div.notification__label
           span.notification__descr Remove Time Limit
           span.notification__star.icon.star_blue
 
       div.main-wrap
-        div.switch-wrap
-          span.switch-wrap__name Click to connect
+
+        div.switch-wrap.disconnected
+          span.switch-wrap__name Disconnected
           div.switch
             label.switch__label
             input.switch__input(type='checkbox')
             span.switch__name.is-on On
             span.switch__name Off
             span.switch__round
+              span.icon.is-disconnect
 
         include ../partials/dropdown.pug
 
